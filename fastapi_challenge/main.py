@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import FastAPI
 from pydantic import BaseModel
 
@@ -8,6 +9,7 @@ class InternDetails(BaseModel):
     name: str
     studying: str
     age: int
+    hobbies: List[str]
 
 # Root endpoint
 @app.get("/")
